@@ -44,12 +44,9 @@
                     echo '
                     <div class="col-md-3">
                         <div class="thumbnail">
-                            <img src="'.$folder . '/' . $result.'" alt="...">
-                            <p><a href="delete.php?name='.$result.'" class="btn btn-danger btn-xs" role="button">Delete</a>    <a href="share.php?name='.$result.'" class="btn btn-primary btn-xs" role="button">Share</a></p>
+                            <img src="'.$folder . '/' . $result.'" alt="..." >
+                            <p id="buttons" ><a href="delete.php?name='.$result.'" class="btn btn-danger btn-xs" role="button">Delete</a>    <a href="share.php?name='.$result.'" class="btn btn-primary btn-xs" role="button">Share</a></p>
                                 <div class="caption">
-                                <div class="hover1">
-                                
-                                </div>
                             </div>
                         </div>
                     </div>';

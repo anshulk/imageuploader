@@ -1,4 +1,7 @@
 <?php
+    if(!isset($_REQUEST['file']['name']))
+        header('Location:index.php');
+
          
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
              

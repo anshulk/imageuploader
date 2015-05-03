@@ -1,6 +1,18 @@
 .thumbnail{
     padding: 0px;
 }
+
+#buttons {
+    visibility: hidden;
+}
+
+.thumbnail:hover #buttons {
+    visibility: visible;
+}
+
+.thumbnail:hover img {
+}
+
 .navbar-inverse {
     background-color: rgba(6, 116, 87, 1);
     border-color: #080808;

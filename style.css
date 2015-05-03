@@ -1,0 +1,53 @@
+.thumbnail{
+    padding: 0px;
+}
+.navbar-inverse {
+    background-color: rgba(6, 116, 87, 1);
+    border-color: #080808;
+    margin-bottom: 33px;
+    box-shadow: -4px 7px 17px;
+    height: 81px;
+    
+    position: fixed;
+    top: 0;
+    transition: top 0.2s ease-in-out;
+    width: 100%;
+}
+.nav-up {
+  top: -40px; 
+}
+.col-md-3{
+    position: relative;
+    min-height: 1px;
+    padding-right: 0px;
+    padding-left: 12px;
+}
+.thumbnail .caption {
+    padding: 1px;
+}
+form.well{
+    border-bottom-width: 0px;
+    margin-bottom: 2px;
+    margin-top: 1px;
+}
+.btn-group-xs>.btn, .btn-xs {
+    padding: 0 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    margin: -59px 3px -7px;
+}
+p {
+    margin: 1px 2px -22px;
+}
+
+body{
+    color: #1F1D1D;
+    background-color: #44687B;
+    background-image:url(bg2.jpg);
+    background-repeat: repeat;
+    
+}
+div.container {
+padding-top: 45px;
+}

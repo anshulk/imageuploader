@@ -35,8 +35,8 @@
                <div class="row-md-7">
                 <?php
                     //scan "uploads" folder and display them accordingly
-                $folder = "uploads";
-                $results = scandir('uploads');
+                $folder = "thumbnails";
+                $results = scandir($folder);
                 foreach ($results as $result) {
                 if ($result === '.' or $result === '..') continue;
             
@@ -44,8 +44,9 @@
                     echo '
                     <div class="col-md-3">
                         <div class="thumbnail">
-                            <img src="'.$folder . '/' . $result.'" alt="..." >
-                            <p id="buttons" ><a href="delete.php?name='.$result.'" class="btn btn-danger btn-xs" role="button">Delete</a>    <a href="share.php?name='.$result.'" class="btn btn-primary btn-xs" role="button">Share</a></p>
+                            <a href="uploads/'.$result.'">
+                            <img src="'.$folder.'/'.$result.'"></a>
+                            <p id="buttons" ><a href="delete.php?name='.$result.'" class="btn btn-danger btn-xs" role="button">Delete</a>    <a href="share.php?name='.$result.'" class="btn btn-primary btn-xs" role="button">Share</a> </p>
                                 <div class="caption">
                             </div>
                         </div>

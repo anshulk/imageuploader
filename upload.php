@@ -1,43 +1,4 @@
-<?php  
-
-function resizeImage($imagePath, $width, $height) {
-    $filterType = 1;
-    $blur = 0;
-    $bestFit = 0;
-    $cropZoom = 0;
-    
-    $imagick = new \Imagick(realpath($imagePath));
-    $width = empty($width) ? $imagick->getImageWidth() : $width;
-    $height = empty($height) ? $imagick->getImageHeight() : $height;
-
-    $imagick->resizeImage($width, $height, $filterType, $blur, $bestFit);
-
-    $cropWidth = $imagick->getImageWidth();
-    $cropHeight = $imagick->getImageHeight();
-
-    if ($cropZoom) {
-        $newWidth = $cropWidth / 2;
-        $newHeight = $cropHeight / 2;
-
-        $imagick->cropimage(
-            $newWidth,
-            $newHeight,
-            ($cropWidth - $newWidth) / 2,
-            ($cropHeight - $newHeight) / 2
-        );
-
-        $imagick->scaleimage(
-            $imagick->getImageWidth() * 4,
-            $imagick->getImageHeight() * 4
-        );
-    }
-
-    header("Content-Type: image/jpg");
-    echo $imagick->getImageBlob();
-}
-
-
-
+<?php
   if(empty($_REQUEST['file']['name']))
         //header('Location:index.php');
 
@@ -66,8 +27,6 @@ function resizeImage($imagePath, $width, $height) {
                         $targetPath =  dirname( __FILE__ ) . DIRECTORY_SEPARATOR. 'uploads' . DIRECTORY_SEPARATOR. $name;
                         move_uploaded_file($tmpName,$targetPath);
                         chmod("uploads/".$name, 0777);
-                        
-//                        echo resizeTmage($targetPath, 500, 500);
                         $imagick = new \Imagick(realpath($targetPath));
                         $imagick->cropThumbnailImage(300,300);
                         if ($imagick->writeImage("thumbnails/".$name))
